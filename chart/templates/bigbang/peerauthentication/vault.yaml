@@ -7,14 +7,10 @@ metadata:
 spec:
   mtls:
     mode: {{ .Values.istio.mtls.mode }}
-  selector:
-    matchLabels:
-      app.kubernetes.io/name: vault
   portLevelMtls:
     "8080":
       mode: PERMISSIVE
-    "8201":
-      mode: PERMISSIVE
-    "443":
-      mode: PERMISSIVE
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: vault
 {{- end }}
