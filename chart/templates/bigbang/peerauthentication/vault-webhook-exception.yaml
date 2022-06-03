@@ -10,6 +10,8 @@ spec:
   portLevelMtls:
     "443":
       mode: PERMISSIVE
+    "8080":
+      mode: PERMISSIVE
   selector:
     matchLabels:
       app.kubernetes.io/name: vault-agent-injector
